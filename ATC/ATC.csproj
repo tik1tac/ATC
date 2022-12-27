@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B1E02956-267F-4E79-A768-F48AD2715EC4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ATC</RootNamespace>
+    <AssemblyName>ATC</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_telephone.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>BunifuCrack-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\..\..\source\repos\ATC\ATC\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\..\source\repos\ATC\ATC\BunifuCrack-main\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>..\..\..\source\repos\ATC\ATC\BunifuCrack-main\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>BunifuCrack-main\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>BunifuCrack-main\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\DX_500Model\AnswersDX_500.cs" />
+    <Compile Include="Model\HipassModel\HipassAnswers.cs" />
+    <Compile Include="Model\HipassModel\QuestionsHipass.cs" />
+    <Compile Include="Model\HicomModel\AnswersHiCom.cs" />
+    <Compile Include="Model\HicomModel\QuestionsHiCom.cs" />
+    <Compile Include="Model\T_76Model\T_76Answers.cs" />
+    <Compile Include="Model\T_76Model\T_76Questions.cs" />
+    <Compile Include="Views\Alltests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Alltests.Designer.cs">
+      <DependentUpon>Alltests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\Rezult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Main\Rezult.Designer.cs">
+      <DependentUpon>Rezult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\QA\Ansewrs.cs" />
+    <Compile Include="Model\DX_500Model\QuestionsDX.cs" />
+    <Compile Include="Views\Main\AboutProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Main\AboutProgram.Designer.cs">
+      <DependentUpon>AboutProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DX-500.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DX-500.Designer.cs">
+      <DependentUpon>DX-500.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Main\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HiCom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\HiCom.Designer.cs">
+      <DependentUpon>HiCom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HiPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\HiPass.Designer.cs">
+      <DependentUpon>HiPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\T-76.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\T-76.Designer.cs">
+      <DependentUpon>T-76.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\QA\Questions.cs" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Views\Alltests.resx">
+      <DependentUpon>Alltests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\AboutProgram.resx">
+      <DependentUpon>AboutProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DX-500.resx">
+      <DependentUpon>DX-500.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\HiCom.resx">
+      <DependentUpon>HiCom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\HiPass.resx">
+      <DependentUpon>HiPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\Rezult.resx">
+      <DependentUpon>Rezult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\T-76.resx">
+      <DependentUpon>T-76.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8_telephone.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
